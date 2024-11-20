@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FoodMenu from './components/FoodMenu';
+import LoginPage from './components/LoginPage';
+import SignUpPage from './components/SignUpPage';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -19,7 +22,13 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <FoodMenu handleThemeChange={handleThemeChange} />
+    <Router>
+    <Routes>
+      <Route path="/" element={<FoodMenu handleThemeChange={handleThemeChange}/>} /> {/* Default route */}
+      <Route path="/login" element={<LoginPage />} /> {/* Login route */}
+      <Route path="/signup" element={<SignUpPage />} /> {/* Sign-Up route */}
+    </Routes>
+  </Router>
     </ThemeProvider>
   );
 }

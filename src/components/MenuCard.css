@@ -1,9 +1,13 @@
+.home{
+  overflow-x: hidden;
+  height: 100vh;
+}
 .card-container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  padding: 16px;
-  margin-left: 1rem;
+  padding-left: 3rem;
 }
 
 .card-item {
