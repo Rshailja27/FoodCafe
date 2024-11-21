@@ -7,7 +7,7 @@ function LoginFooter() {
     <Box component="footer" sx={{ padding: '0.5rem', position: 'absolute', bottom: 0, width: '100%' }}>
       <Box className="useful-links" sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         <Typography variant="body2" sx={{ fontWeight: 600, margin: '0 0.5rem' }}>
-          <strong>FoodCafe</strong> &copy; 2024
+          <strong>FoodCafe</strong>&copy; 2024
         </Typography>
         <Link
           href="#"
