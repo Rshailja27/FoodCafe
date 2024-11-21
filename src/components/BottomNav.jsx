@@ -8,6 +8,7 @@ import Paper from '@mui/material/Paper';
 import RestoreIcon from '@mui/icons-material/Restore';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocalMallIcon from '@mui/icons-material/LocalMall';
 import { deepOrange } from '@mui/material/colors';
 
 export default function BottomNav() {
@@ -33,9 +34,9 @@ export default function BottomNav() {
         icon={<RestoreIcon />}
       />
       <BottomNavigationAction
-        label="Favorites"
-        value="favorites"
-        icon={<FavoriteIcon />}
+        label="Orders"
+        value="orders"
+        icon={<LocalMallIcon />}
       />
       <BottomNavigationAction
         label="Nearby"
