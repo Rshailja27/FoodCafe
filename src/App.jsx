@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FoodMenu from './components/FoodMenu';
 import LoginPage from './components/LoginPage';
 import SignUpPage from './components/SignUpPage';
+import ForgotPassword from './components/ForgotPassword';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -27,6 +28,7 @@ export default function App() {
       <Route path="/" element={<FoodMenu handleThemeChange={handleThemeChange}/>} /> {/* Default route */}
       <Route path="/login" element={<LoginPage />} /> {/* Login route */}
       <Route path="/signup" element={<SignUpPage />} /> {/* Sign-Up route */}
+      <Route path="/forgotpass" element={<ForgotPassword />} /> {/* Forgot Password route */}
     </Routes>
   </Router>
     </ThemeProvider>

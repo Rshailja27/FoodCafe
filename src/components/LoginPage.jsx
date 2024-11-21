@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Box, TextField, Typography, 
-  Button, Grid, Link,Checkbox, FormControlLabel  } from '@mui/material';
+  Button, Grid, Link,Checkbox, FormControlLabel, InputAdornment } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -59,7 +60,16 @@ function LoginPage() {
               type="password"
               id="password"
               autoComplete="current-password"
-              InputLabelProps={{ required: false }} 
+              InputLabelProps={{ required: false }}       
+              slotProps={{
+              input: {
+              endAdornment: (
+              <InputAdornment position="end">
+                <VisibilityOffIcon />
+              </InputAdornment>
+            ),
+          },
+        }}
             />
              
              <FormControlLabel 
@@ -72,7 +82,6 @@ function LoginPage() {
               fullWidth
               variant="contained"
               sx={{
-                mt: 2,
                 mb: 2,
                 fontWeight:'500',
                 bgcolor: '#b30000',
@@ -83,14 +92,14 @@ function LoginPage() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2"
+                <Link component={RouterLink} to="/forgotpass"  variant="body2"
                 sx={{fontWeight:'600'}}>
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>                
                   {"Don't have an account?"}                
-                <Link  component={RouterLink} to="/signup" 
+                <Link component={RouterLink} to="/signup" 
                 variant="body2" sx={{fontWeight:'600'}}>
                   Sign Up
                 </Link>
