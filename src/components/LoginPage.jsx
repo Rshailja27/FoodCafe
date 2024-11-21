@@ -33,7 +33,7 @@ function LoginPage() {
           }}
         >
           <Typography component="h1" variant="h4">
-            Welcome to Swigato!
+            Welcome to Food Cafe!
           </Typography>
           <Typography variant="body2" color="textSecondary" sx={{ mt: 1, mb: 1 }}>
             Please log in to your account
